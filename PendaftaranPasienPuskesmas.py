@@ -54,4 +54,36 @@ def biaya11(): #jasa pelayanan gigi
     x11= 30000
     print("Total Biaya: Rp", x11)
     return x11
+listPelayanan= [
+               "b1: obat dan jasa",
+               "b2: obat, jasa, suntik",
+               "b3: obat, jasa, medikasi",
+               "b4: obat, jasa, penjahitan luka",
+               "b5: obat, jasa, suntik, medikasi",
+               "b6: obat, jasa, suntik, jahit luka",
+               "b7: obat, jasa, medikasi, jahit luka",
+               "b8: obat, jasa, suntik, medikasi, jahit luka",
+               "b9: obat dan jasa kesehatan gigi",
+               "b10: obat, jasa kesehatan gigi, medikasi",
+               "b11: jasa",
+               ]
+print("PENDAFTARAN PASIEN PUSKESMAS I MOJOSONGO")
+print("Jalan Sehat Sejahtera 07, Mojosongo, Solo")
+print("======================================================")
+print(" ")
 
+print("Silakan Pilih Golongan Pasien")
+print("1: Pasien Umum")
+print("2: Pasien BPJS")
+
+Z = int(input("Golongan 1 atau 2?: "))
+kartu=input("Apakah pasien pernah berobat di sini? (y/t):")
+if kartu == "t":
+    print("Mohon maaf\nPasien dipersilakan menuju bagian administrasi  untuk mendapatkan nomor rekam medis")  
+    print ("Masukkan nomor rekam medis pasien!", end=' ')
+    no = input ()
+    print ()
+else:
+    kartu= input("Apakah pasien membawa kartu berobat? (y/t):")
+    if kartu == "t" :
+        print ("Silakan mencari di data pasien")
