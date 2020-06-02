@@ -54,19 +54,11 @@ def biaya11(): #jasa pelayanan gigi
     x11= 30000
     print("Total Biaya: Rp", x11)
     return x11
-listPelayanan= [
-               "b1: obat dan jasa",
-               "b2: obat, jasa, suntik",
-               "b3: obat, jasa, medikasi",
-               "b4: obat, jasa, penjahitan luka",
-               "b5: obat, jasa, suntik, medikasi",
-               "b6: obat, jasa, suntik, jahit luka",
-               "b7: obat, jasa, medikasi, jahit luka",
-               "b8: obat, jasa, suntik, medikasi, jahit luka",
-               "b9: obat dan jasa kesehatan gigi",
-               "b10: obat, jasa kesehatan gigi, medikasi",
-               "b11: jasa",
-               ]
+def biaya00(): #Pengguna Layanan BPJS
+    x00= 0
+    print("Total Biaya: Rp", x00,"Anda menggunakan layanan BPJS")
+    return x00
+
 print("PENDAFTARAN PASIEN PUSKESMAS I MOJOSONGO")
 print("Jalan Sehat Sejahtera 07, Mojosongo, Solo")
 print("======================================================")
@@ -106,22 +98,32 @@ if Z == 1:
         print("")
         print('')
         print("Rincian Biaya")
-        print("Pilih jenis pelayanan")
-        print(listPelayanan)
-        Q= input("Masukkan pelayanan yang didapatkan pasien!(b1 atau b2 atau dst):")
-        if Q== "b1":
+        print(f"__________________________________________________")
+        print(f"========== SILAHKAN PILIH PELAYANAN ==============|")
+        print(f"__________________________________________________")
+        print(f"|  B1.  obat dan jasa                             |")
+        print(f"|  B2.  obat, jasa, suntik                        |")
+        print(f"|  B3.  obat, jasa, medikasi                      |")
+        print(f"|  B4.  obat, jasa, penjahitan luka               |")
+        print(f"|  B5.  obat, jasa, suntik, medikasi              |") 
+        print(f"|  B6.  obat, jasa, suntik, jahit luka            |")
+        print(f"|  B7.  obat, jasa, medikasi, jahit luka          |")
+        print(f"|  B8.  obat, jasa, suntik, medikasi, jahit luka  |")
+        print(f"-------------------------------------------------")
+        pilih_layanan = input("Pilih layanan (B1-B8) = ")
+        if pilih_layanan == "B1":
             print(biaya1())
-        elif Q== "b2":
+        elif pilih_layanan == "B2":
             print(biaya2())
-        elif Q== "b3":
+        elif pilih_layanan == "B3":
             print(biaya3())
-        elif Q== "b4":
+        elif pilih_layanan == "B4":
             print(biaya4())
-        elif Q== "b5":
+        elif pilih_layanan == "B5":
             print(biaya5())
-        elif Q== "b6":
+        elif pilih_layanan == "B6":
             print(biaya6())
-        elif Q== "b7":
+        elif pilih_layanan == "B7":
             print(biaya7())
         else:
             print(biaya8())
@@ -134,12 +136,17 @@ if Z == 1:
         print (f"Pasien dengan, \n Golongan         : 1 (Pasien Umum) \nNo. Kartu Berobat : {no} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
         
         print("Rincian biaya")
-        print("Pilih jenis pelayanan")
-        print(listPelayanan)
-        Q= input("Masukkan pelayanan yang didapatkan pasien!(b9 atau b10 atau b11):")
-        if Q== "b9":
+        print(f"__________________________________________________")
+        print(f"|========== SILAHKAN PILIH PELAYANAN ==============|")
+        print(f"__________________________________________________")
+        print(f"|  B9.  obat dan jasa kesehatan gigi              |")
+        print(f"|  B10. obat, jasa kesehatan gigi, medikasi       |")
+        print(f"|  B11. jasa                                      |")
+        print(f"-------------------------------------------------")
+        pilih_layanan = input("Pilih layanan (B9-B11) = ")
+        if pilih_layanan == "B9":
             print(biaya9())
-        elif Q== "b10":
+        elif pilih_layanan == "B10":
             print(biaya10())
         else:
             print(biaya11())
@@ -152,4 +159,64 @@ else:
         print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
     
         import time
+        time.sleep (5)
+        print ()
+        print (f"Pasien dengan, \n Golongan         : 2 (Pasien BPJS) \nNo. Kartu Berobat : {no} \nNo. Kartu BPJS    : {bpjs} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan umum untuk mendapatkan penanganan\nTerimakasih")
+        print("")
+        print('')
+        print("Rincian Biaya")
+        print(f"__________________________________________________")
+        print(f"========== SILAHKAN PILIH PELAYANAN ==============|")
+        print(f"__________________________________________________")
+        print(f"|  B1.  obat dan jasa                             |")
+        print(f"|  B2.  obat, jasa, suntik                        |")
+        print(f"|  B3.  obat, jasa, medikasi                      |")
+        print(f"|  B4.  obat, jasa, penjahitan luka               |")
+        print(f"|  B5.  obat, jasa, suntik, medikasi              |") 
+        print(f"|  B6.  obat, jasa, suntik, jahit luka            |")
+        print(f"|  B7.  obat, jasa, medikasi, jahit luka          |")
+        print(f"|  B8.  obat, jasa, suntik, medikasi, jahit luka  |")
+        print(f"-------------------------------------------------")
+        pilih_layanan = input("Pilih layanan (B1-B8) = ")
+        if pilih_layanan == "B1":
+            print(biaya00())
+        elif pilih_layanan == "B2":
+            print(biaya00())
+        elif pilih_layanan == "B3":
+            print(biaya00())
+        elif pilih_layanan == "B4":
+            print(biaya00())
+        elif pilih_layanan == "B5":
+            print(biaya00())
+        elif pilih_layanan == "B6":
+            print(biaya00())
+        elif pilih_layanan == "B7":
+            print(biaya00())
+        else:
+            print(biaya00())     
+     
+    else:
+         print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+            
+         import time
+         time.sleep (5)
+         print ()
+         print (f"Pasien dengan, \n Golongan         : 2 (Pasien BPJS) \nNo. Kartu Berobat : {no} \nNo. Kartu BPJS    : {bpjs} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
+         print("__________________________________________________")
+         print(f"|========== SILAHKAN PILIH PELAYANAN ==============|")
+         print("__________________________________________________")
+         print(f"|  B9.  obat dan jasa kesehatan gigi              |")
+         print(f"|  B10. obat, jasa kesehatan gigi, medikasi       |")
+         print(f"|  B11. jasa                                      |")
+         print(f"-------------------------------------------------")
+         pilih_layanan = input("Pilih layanan (B9-B11) = ")
+         if pilih_layanan == "B9":
+            print(biaya00())
+         elif pilih_layanan == "B10":
+            print(biaya00())
+         else:
+            print(biaya00())
+print("")
+print("Peroses telah selesai")
+
  
