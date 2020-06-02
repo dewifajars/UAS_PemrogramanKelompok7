@@ -87,6 +87,8 @@ else:
     kartu= input("Apakah pasien membawa kartu berobat? (y/t):")
     if kartu == "t" :
         print ("Silakan mencari di data pasien")
+        print ("Masukkan nomor kartu berobat pasien!", end=' ')
+        no = input ()
          
     else :
         print ("Masukkan nomor kartu berobat pasien!", end=' ')
