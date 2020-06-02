@@ -121,3 +121,35 @@ if Z == 1:
             print(biaya5())
         elif Q== "b6":
             print(biaya6())
+        elif Q== "b7":
+            print(biaya7())
+        else:
+            print(biaya8())
+    else:
+        print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+            
+        import time
+        time.sleep (5)
+        print ()
+        print (f"Pasien dengan, \n Golongan         : 1 (Pasien Umum) \nNo. Kartu Berobat : {no} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
+        
+        print("Rincian biaya")
+        print("Pilih jenis pelayanan")
+        print(listPelayanan)
+        Q= input("Masukkan pelayanan yang didapatkan pasien!(b9 atau b10 atau b11):")
+        if Q== "b9":
+            print(biaya9())
+        elif Q== "b10":
+            print(biaya10())
+        else:
+            print(biaya11())
+else:
+    print("Masukkan nomor BPJS pasien:", end=' ')
+    bpjs= input()
+    print()
+    P= input("Pelayanan P1 atau P2?: ")
+    if P == "P1":
+        print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+    
+        import time
+ 
