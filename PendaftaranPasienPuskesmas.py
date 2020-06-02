@@ -87,3 +87,35 @@ else:
     kartu= input("Apakah pasien membawa kartu berobat? (y/t):")
     if kartu == "t" :
         print ("Silakan mencari di data pasien")
+         
+    else :
+        print ("Masukkan nomor kartu berobat pasien!", end=' ')
+        no = input ()
+        
+if Z == 1:
+    P = input("Pelayanan P1 atau P2?: ")
+    if P == "P1":
+        print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+            
+        import time
+        time.sleep (5)
+        print ()
+        print (f"Pasien dengan, \n Golongan         : 1 (Pasien Umum) \nNo. Kartu Berobat : {no} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan umum untuk mendapatkan penanganan\nTerimakasih")
+        print("")
+        print('')
+        print("Rincian Biaya")
+        print("Pilih jenis pelayanan")
+        print(listPelayanan)
+        Q= input("Masukkan pelayanan yang didapatkan pasien!(b1 atau b2 atau dst):")
+        if Q== "b1":
+            print(biaya1())
+        elif Q== "b2":
+            print(biaya2())
+        elif Q== "b3":
+            print(biaya3())
+        elif Q== "b4":
+            print(biaya4())
+        elif Q== "b5":
+            print(biaya5())
+        elif Q== "b6":
+            print(biaya6())
