@@ -70,3 +70,19 @@ else:
 	print(f"Pasien dengan, \n Golongan    : 2 (Pasien BPJS) \nNo. Kartu Berobat : {no} \n====TELAH TERDAFTAR====\nSilahkan ambil rekam medis pasien")	
    else:
    	print (Mohon tunggu sebentar, data anda sedang kami proses...")
+	
+	import time
+        time.sleep (5)
+        print ()
+        print (f"Pasien dengan, \n Golongan         : 2 (Pasien BPJS) \nNo. Kartu Berobat : {no} \nNo. Kartu BPJS    : {bpjs} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan umum untuk mendapatkan penanganan\nTerimakasih")
+        print("Total Biaya: Rp0")
+    else:
+        print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+            
+        import time
+        time.sleep (5)
+        print ()
+        print (f"Pasien dengan, \n Golongan         : 2 (Pasien BPJS) \nNo. Kartu Berobat : {no} \nNo. Kartu BPJS    : {bpjs} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
+        print("Total Biaya: Rp0")
+print("")
+print("Peroses telah selesai")
