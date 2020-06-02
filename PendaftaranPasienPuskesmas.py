@@ -110,7 +110,7 @@ if Z == 1:
         print(f"|  B7.  obat, jasa, medikasi, jahit luka          |")
         print(f"|  B8.  obat, jasa, suntik, medikasi, jahit luka  |")
         print(f"-------------------------------------------------")
-        pilih_layanan = input("Pilih layanan (B1-B8) = ")
+        pilih_layanan = input("Pilih layanan (B1-B8) : ")
         if pilih_layanan == "B1":
             print(biaya1())
         elif pilih_layanan == "B2":
@@ -143,7 +143,7 @@ if Z == 1:
         print(f"|  B10. obat, jasa kesehatan gigi, medikasi       |")
         print(f"|  B11. jasa                                      |")
         print(f"-------------------------------------------------")
-        pilih_layanan = input("Pilih layanan (B9-B11) = ")
+        pilih_layanan = input("Pilih layanan (B9-B11) : ")
         if pilih_layanan == "B9":
             print(biaya9())
         elif pilih_layanan == "B10":
@@ -177,7 +177,7 @@ else:
         print(f"|  B7.  obat, jasa, medikasi, jahit luka          |")
         print(f"|  B8.  obat, jasa, suntik, medikasi, jahit luka  |")
         print(f"-------------------------------------------------")
-        pilih_layanan = input("Pilih layanan (B1-B8) = ")
+        pilih_layanan = input("Pilih layanan (B1-B8) : ")
         if pilih_layanan == "B1":
             print(biaya00())
         elif pilih_layanan == "B2":
@@ -216,6 +216,8 @@ else:
             print(biaya00())
          else:
             print(biaya00())
+print("")
+print("Pembayaran dilakukan di bagian kasir.")
 print("")
 print("Peroses telah selesai")
 
