@@ -42,4 +42,16 @@ def biaya8(): #obat+jasa+tindakan khusus a, b, dan c
     x8= 10000+30000+20000+15000+25000
     print("Total Biaya: Rp", x8)
     return x8
+def biaya9(): #obat+jasa pelayanan gigi
+    x9= 10000+30000
+    print("Total Biaya: Rp", x9)
+    return x9
+def biaya10(): #obat+jasa pelayanan gigi+medikasi kesehatan gigi dan mulut
+    x10= 10000+30000+30000
+    print("Total Biaya: Rp", x10)
+    return x10
+def biaya11(): #jasa pelayanan gigi
+    x11= 30000
+    print("Total Biaya: Rp", x11)
+    return x11
 
