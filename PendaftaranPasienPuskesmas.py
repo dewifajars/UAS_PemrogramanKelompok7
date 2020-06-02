@@ -56,8 +56,8 @@ def biaya11(): #jasa pelayanan gigi
     return x11
 def biaya00(): #Pengguna Layanan BPJS
     x00= 0
-    print("Total Biaya: Rp", x00,"Anda menggunakan layanan BPJS")
-    return x00
+    print("Total Biaya: Rp", x00)
+    return "Anda menggunakan layanan BPJS"
 
 print("PENDAFTARAN PASIEN PUSKESMAS I MOJOSONGO")
 print("Jalan Sehat Sejahtera 07, Mojosongo, Solo")
