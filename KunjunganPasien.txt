@@ -1,0 +1,5 @@
+NOMOR,NAMA,ALAMAT,GOLONGAN,DIAGNOSA,JENIS PELAYANAN,TERAPI OBAT,BIAYA
+2020-06-11 21:38:57.682611,030604,Alvi Syahrin,Jalan Asa 07 Mojosongo Solo,Umum,Diare,B1,Loperamid Paracetamol,40000
+2020-06-12 15:49:17.084152,030604,Alvi Syahrin,Jalan Asa 07 Mojosongo Solo,Umum,Demam,B1,Ibuprofen Ctm,40000
+2020-06-12 15:51:26.314338,030604,Alvi Syahrin,Jalan Asa 07 Mojosongo Solo,Umum,Hipertensi,B1,Kaptopril B-kompleks,0
+2020-06-12 15:53:36.294892,030602,Bella Almira,Jalan Banda 11 Solo,BPJS,Flu,B1,Molexflu Ctm B-kompleks,0
