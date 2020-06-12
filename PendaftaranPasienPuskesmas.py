@@ -72,72 +72,72 @@ print("")
 
 valid = 0;
 while (valid != 1):
-
-Z = int(input("Golongan 1 atau 2?: "))
-kartu=input("Apakah pasien pernah berobat di sini? (y/t):")
-if kartu == "t":
-    print("Mohon maaf\nPasien dipersilakan menuju bagian administrasi  untuk mendapatkan nomor rekam medis")  
-    print ("Masukkan nomor rekam medis pasien!", end=' ')
-    no = input ()
-    print ()
-else:
-    kartu= input("Apakah pasien membawa kartu berobat? (y/t):")
-    if kartu == "t" :
-        print ("Silakan mencari di data pasien")
-        print ("Masukkan nomor kartu berobat pasien!", end=' ')
+    kartu=input("Apakah pasien pernah berobat di sini? (y/t):")
+    if kartu == "t":
+        print("Mohon maaf\nPasien dipersilakan menuju bagian administrasi  untuk mendapatkan nomor rekam medis")  
+        print ("Masukkan nomor rekam medis pasien!", end=' ')
         no = input ()
-         
-    else :
-        print ("Masukkan nomor kartu berobat pasien!", end=' ')
-        no = input ()
-        
-if Z == 1:
-    P = input("Pelayanan P1 atau P2?: ")
-    if P == "P1":
-        print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
-            
-        import time
-        time.sleep (5)
         print ()
-        print (f"Pasien dengan, \n Golongan         : 1 (Pasien Umum) \nNo. Kartu Berobat : {no} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan umum untuk mendapatkan penanganan\nTerimakasih")
-        print("")
-        print('')
-        print("Rincian Biaya")
-        print(f"__________________________________________________")
-        print(f"========== SILAHKAN PILIH PELAYANAN ==============|")
-        print(f"__________________________________________________")
-        print(f"|  B1.  obat dan jasa                             |")
-        print(f"|  B2.  obat, jasa, suntik                        |")
-        print(f"|  B3.  obat, jasa, medikasi                      |")
-        print(f"|  B4.  obat, jasa, penjahitan luka               |")
-        print(f"|  B5.  obat, jasa, suntik, medikasi              |") 
-        print(f"|  B6.  obat, jasa, suntik, jahit luka            |")
-        print(f"|  B7.  obat, jasa, medikasi, jahit luka          |")
-        print(f"|  B8.  obat, jasa, suntik, medikasi, jahit luka  |")
-        print(f"-------------------------------------------------")
-        pilih_layanan = input("Pilih layanan (B1-B8) : ")
-        if pilih_layanan == "B1":
-            print(biaya1())
-        elif pilih_layanan == "B2":
-            print(biaya2())
-        elif pilih_layanan == "B3":
-            print(biaya3())
-        elif pilih_layanan == "B4":
-            print(biaya4())
-        elif pilih_layanan == "B5":
-            print(biaya5())
-        elif pilih_layanan == "B6":
-            print(biaya6())
-        elif pilih_layanan == "B7":
-            print(biaya7())
-        else:
-            print(biaya8())
+        valid = 1;
+            
+    elif kartu == "y":
+        while (valid !=1):
+            kartu= input("Apakah pasien membawa kartu berobat? (y/t):")
+            if kartu == "t" :
+                print ("Silakan mencari di data pasien")
+                print ("Masukkan nomor kartu berobat pasien!", end=' ')
+                nomor = input ()
+                valid = 1;
+            elif kartu == "y" :
+                f= open('DataPasien.txt', 'r')
+                reader= csv.reader(f)
+                pasien = {}
+                for row in reader:
+                    pasien[row[0]] = {'nama': row[1], 'alamat' : row[2], 'golongan' : row[3]}
+                nomor = input("Masukkan nomor kartu berobat pasien!")
+                test = nomor
+                print("")
+                print("Data Pasien")
+                print("Nomor Rekam Medis Pasien : ",nomor)
+                print("Nama                     : ", pasien[nomor]['nama'])
+                print("Alamat                   : ", pasien[nomor]['alamat'])
+                print("Golongan Pasien          : ", pasien[nomor]['golongan'])
+                valid = 1;
+            else:
+                print ("Silahkan masukan pihihan [y] atau [t]")
+            
     else:
-        print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
-            
-        import time
-        time.sleep (5)
-        print ()
+        print ("Silahkan masukan pihihan [y] atau [t]")
+        
+print("")       
+print("SILAHKAN PILIH GOLONGAN PASIEN")
+print("Ketik [1] untuk PASIEN UMUM")
+print("Ketik [2] untuk PASIEN BPJS")
+        
+while True:
+    try:
+        Z = int(input("Golongan 1 atau 2?: "))
+        if Z == 1:
+            print ("")
+            print ("SILAHKAN PILIH PELAYAN")
+            print ("ketik [P1] untuk PELAYANAN UMUM")
+            print ("ketik [P2] untuk PELAKANAN KESEHATAN GIGI & MULUT")
+            while True:
+                P = input("Pelayanan P1 atau P2?: ")
+                if P == "P1":
+                    print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+                
+                    import time
+                    time.sleep (5)
+                    print ()
+                    print (f"Pasien dengan, \n Golongan         : 1 (Pasien Umum) \nNo. Kartu Berobat : {nomor} \nDipersilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan umum untuk mendapatkan penanganan\nTerimakasih")
+                    print("")
+                    print('')
+                    print("Rincian Biaya")
+                    
+                    while True:
+                        print(f"__________________________________________________")
+                        print(f"========== SILAHKAN PILIH PELAYANAN ==============|")
         print (f"Pasien dengan, \n Golongan         : 1 (Pasien Umum) \nNo. Kartu Berobat : {no} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
         
         print("Rincian biaya")
