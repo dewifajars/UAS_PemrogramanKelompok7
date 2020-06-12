@@ -167,6 +167,49 @@ while True:
                     print ("Silahkan Pilih [1] atau [2]")
                     continue
             break
+                elif P == "P2" :    
+                    print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+                        
+                    import time
+                    time.sleep (5)
+                    print ()
+                    print (f"Pasien dengan, \n Golongan         : 1 (Pasien Umum)\nNo. Kartu Berobat : {nomor} \nDipersilakan mengamambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
+                    print ("")
+                    print ('')
+                    print ("Rincian biaya")
+                    
+                    while (True):
+                        print(f"__________________________________________________")
+                        print(f"|========== SILAHKAN PILIH PELAYANAN ==============|")
+                        print(f"__________________________________________________")
+                        print(f"|  B9.  obat dan jasa kesehatan gigi              |")
+                        print(f"|  B10. obat, jasa kesehatan gigi, medikasi       |")
+                        print(f"|  B11. jasa                                      |")
+                        print(f"-------------------------------------------------")
+                        pilih_layanan = input("Pilih layanan (B9-B11) = ")
+                        import time
+                        time.sleep (3)
+                        if pilih_layanan == "B9":
+                            bil=biaya9()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B10":
+                            bil=biaya10()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B11":
+                            bil=biaya11()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        else:
+                            print("=====SILAHKAN MASUKAN PILIHAN B1-B8!!=====")
+                            continue
+                    break
+                else:
+                    print ("Data yang anda masukan salah")
+                    print ("Silahkan Pilih [1] atau [2]")
+                    continue
+            break
     
         elif Z == 2:
             print("Masukkan nomor BPJS pasien:", end=' ')
@@ -204,26 +247,29 @@ while True:
                         print(f"-------------------------------------------------")
                         pilih_layanan = input("Pilih layanan (B1-B8) = ")
                         import time
-         time.sleep (5)
-         print ()
-         print (f"Pasien dengan, \n Golongan         : 2 (Pasien BPJS) \nNo. Kartu Berobat : {no} \nNo. Kartu BPJS    : {bpjs} \n====TELAH TERDAFTAR====\nSilakan ambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
-         print("__________________________________________________")
-         print(f"|========== SILAHKAN PILIH PELAYANAN ==============|")
-         print("__________________________________________________")
-         print(f"|  B9.  obat dan jasa kesehatan gigi              |")
-         print(f"|  B10. obat, jasa kesehatan gigi, medikasi       |")
-         print(f"|  B11. jasa                                      |")
-         print(f"-------------------------------------------------")
-         pilih_layanan = input("Pilih layanan (B9-B11) = ")
-         if pilih_layanan == "B9":
-            print(biaya00())
-         elif pilih_layanan == "B10":
-            print(biaya00())
-         else:
-            print(biaya00())
-print("")
-print("Pembayaran dilakukan di bagian kasir.")
-print("")
-print("Peroses telah selesai")
-
- 
+                        time.sleep (3)
+                        if pilih_layanan == "B1":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B2":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B3":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B4":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B5":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B6":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break    
+       
