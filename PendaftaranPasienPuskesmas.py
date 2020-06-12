@@ -4,69 +4,74 @@ Created on Tue Jun  2 13:43:24 2020
 
 @author: User
 """
-#standart harga obat= RP10000, standar biaya jasa= RP30000
-#standar harga tindakan khusus
-   #a. pemberian suntikan = RP20000
-   #b. medikasi=RP15000
-   #c. penjahitan luka=RP25000
-   #d. medikasi kesehatan gigi dan mulut = RP30000
+
+import csv
+O = 10000 #standart harga obat
+J= 30000 #standart biaya jasa
+Ta= 20000 #standart biaya tindakan khusus a (pemberian suntikan)
+Tb= 15000 #standart biaya tindakan khusus b (medikasi)
+Tc= 25000 #standart biaya tindakan khusus b (penjahitan luka)
+Td= 30000  #standart biaya tindakan khusus d (medikasi kesehatan gigi dan mulut)
+Tbpjs= 0
+
 def biaya1(): #obat+jasa
-    x1= 10000+30000
-    print("Total Biaya: Rp",x1)
+    x1= O + J
     return x1
 def biaya2(): #obat+jasa+tindakan khusus a
-    x2= 10000+30000+20000
-    print("Total Biaya: Rp", x2)
-    return x2
+    x2= O + J + Ta
+    return x2#"Anda menggunakan layanan NON-BPJS"
 def biaya3(): #obat+jasa+tindakan khusus b
-    x3= 10000+30000+15000
-    print("Total Biaya: Rp", x3)
-    return x3
+    x3= O + J + Tb
+    return x3 #"Anda menggunakan layanan NON-BPJS"
 def biaya4(): #obat+jasa+tindakan khusus c
-    x4= 10000+30000+25000
-    print("Total Biaya: Rp", x4)
-    return x4
+    x4= O + J + Tc
+    return x4 #"Anda menggunakan layanan NON-BPJS"
 def biaya5(): #obat+jasa+tindakan khusus a dan b
-    x5= 10000+30000+20000+15000
-    print("Total Biaya: Rp", x5)
-    return x5
+    x5= O + J + Ta + Tb
+    return x5 # "Anda menggunakan layanan NON-BPJS"
 def biaya6(): #obat+jasa+tindakan khusus a dan c
-    x6= 10000+30000+20000+25000
-    print("Total Biaya: Rp", x6)
-    return x6
+    x6= O + J + Ta + Tc
+    return x6 #"Anda menggunakan layanan NON-BPJS"
 def biaya7(): #obat+jasa+tindakan khusus b dan c
-    x7= 10000+30000+15000+25000
-    print("Total Biaya: Rp", x7)
-    return x7
+    x7= O + J + Tb +Tc
+    return x7 #"Anda menggunakan layanan NON-BPJS"
 def biaya8(): #obat+jasa+tindakan khusus a, b, dan c
-    x8= 10000+30000+20000+15000+25000
-    print("Total Biaya: Rp", x8)
-    return x8
+    x8= O + J + Ta + Tb +Tc
+    return x8 # "Anda menggunakan layanan NON-BPJS"
 def biaya9(): #obat+jasa pelayanan gigi
-    x9= 10000+30000
-    print("Total Biaya: Rp", x9)
-    return x9
+    x9= O + J
+    return x9 #"Anda menggunakan layanan NON-BPJS"
 def biaya10(): #obat+jasa pelayanan gigi+medikasi kesehatan gigi dan mulut
-    x10= 10000+30000+30000
-    print("Total Biaya: Rp", x10)
-    return x10
+    x10= O + J + Td
+    return x10 #"Anda menggunakan layanan NON-BPJS"
 def biaya11(): #jasa pelayanan gigi
-    x11= 30000
-    print("Total Biaya: Rp", x11)
-    return x11
+    x11= J
+    return x11 #"Anda menggunakan layanan NON-BPJS"
 def biaya00(): #Pengguna Layanan BPJS
-    x00= 0
-    print("Total Biaya: Rp", x00)
-    return "Anda menggunakan layanan BPJS"
+    x00= Tbpjs
+    return x00 #"Anda menggunakan layanan BPJS"
 
-print("PENDAFTARAN PASIEN PUSKESMAS I MOJOSONGO")
-print("Jalan Sehat Sejahtera 07, Mojosongo, Solo")
+print("======================================================")
+print("|     PENDAFTARAN PASIEN PUSKESMAS I MOJOSONGO       |")
+print("|    Jalan Sehat Sejahtera 07, Mojosongo, Solo       |") 
 print("======================================================")
 print(" ")
 
-print("Silakan Pilih Golongan Pasien")
-print("1: Pasien Umum")
-print("2: Pasien BPJS")
+import datetime
+time = datetime.datetime.now()
+waktu=time
+print(waktu)
+
+print("")
+print("")
+print("SILAHKAN ISI DENGAN PILIHAN YANG TERTERA")
+print("")
+print("ketik [y] untuk ya")
+print("ketik [t] untuk tidak")
+print("")
+
+valid = 0;
+while (valid != 1):
 
 Z = int(input("Golongan 1 atau 2?: "))
 kartu=input("Apakah pasien pernah berobat di sini? (y/t):")
