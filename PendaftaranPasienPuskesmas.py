@@ -292,4 +292,86 @@ while True:
                             bil=biaya00()
                             print("Total biaya: Rp ",bil)
                             break    
-       
+                        elif pilih_layanan == "B7":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B8":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        else:
+                            print("=====SILAHKAN MASUKAN PILIHAN B1-B8!!=====")
+                            continue
+                    break
+                
+                elif P == "P2":
+                    print ("Mohon Tunggu Sebentar, data anda sedang kami proses...")
+                    import time
+                    time.sleep (5)
+                    print ()
+                    print (f"Pasien dengan, \n Golongan         : 2 (Pasien BPJS) \nNo. Kartu Berobat : {nomor} \nNo. Kartu BPJS    : {bpjs} \nDipersilakan mengambil rekam medis pasien \nPasien dimohon menuju ruang pelayanan kesehatan gigi untuk mendapatkan penanganan\nTerimakasih")
+                    print ("")
+                    print ('')
+                    print ("Rincian Biaya")
+                 
+                    while (True):
+                        print("__________________________________________________")
+                        print(f"|========== SILAHKAN PILIH PELAYANAN ==============|")
+                        print("__________________________________________________")
+                        print(f"|  B9.  obat dan jasa kesehatan gigi              |")
+                        print(f"|  B10. obat, jasa kesehatan gigi, medikasi       |")
+                        print(f"|  B11. jasa                                      |")
+                        print(f"-------------------------------------------------")
+                        pilih_layanan = input("Pilih layanan (B9-B11) = ")
+                        import time
+                        time.sleep (3)
+                        if pilih_layanan == "B9":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B10":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        elif pilih_layanan == "B11":
+                            bil=biaya00()
+                            print("Total biaya: Rp ",bil)
+                            break
+                        else:
+                            print("=====SILAHKAN MASUKAN PILIHAN B1-B8!!=====")
+                            continue
+                    break
+        
+                else:
+                    print ("Data yang anda masukan salah")
+                    print ("Silahkan Pilih [P1] atau [P2]")
+                    continue
+            break  
+        
+        else:  
+          print ("Silahkan pilih [1] atau [2]")
+          continue
+        
+    except ValueError:
+        print ("Data yang anda masukan salah")
+        print ("Silahkan Pilih [1] atau [2]")
+        
+print("")
+diagnosa= input("Masukkan diagnosa pasien: ")
+terapiObat= input("Masukkan obat yang diterima pasien: ")
+
+
+print("")
+j= open('KunjunganPasien.txt', 'a', newline = '')
+line=(waktu,test,pasien[test]['nama'],pasien[test]['alamat'],pasien[test]['golongan'],diagnosa,pilih_layanan,terapiObat, bil)
+writer = csv.writer(j)
+writer.writerow(line)
+j.close()
+
+print (f"====TELAH TERDAFTAR====")
+print("")
+print("Proses telah selesai")
+print("Pasien dipersilakan membayar di bagian kasir")
+print("Terimakasih")
+
